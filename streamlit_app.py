@@ -2,16 +2,9 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import os
-#import ultralytics
+import ultralytics
 import sys
-import subprocess
 
-# Force-install ultralytics if missing
-try:
-    import ultralytics
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "ultralytics"])
-    import ultralytics
 
 from ultralytics import YOLO
 from utils.detector import YOLOModel
