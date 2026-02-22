@@ -4,8 +4,14 @@ import numpy as np
 import os
 import ultralytics
 import sys
-print("Ultralytics version:", ultralytics.__version__)
-print("Python:", sys.version)
+import subprocess
+
+# Force-install ultralytics if missing
+try:
+    import ultralytics
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "ultralytics"])
+    import ultralytics
 
 from utils.detector import YOLOModel
 from utils.visualization import draw_boxes
