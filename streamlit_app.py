@@ -2,6 +2,10 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import os
+import ultralytics
+import sys
+print("Ultralytics version:", ultralytics.__version__)
+print("Python:", sys.version)
 
 from utils.detector import YOLOModel
 from utils.visualization import draw_boxes
