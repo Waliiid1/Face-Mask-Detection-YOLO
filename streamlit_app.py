@@ -13,6 +13,7 @@ except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "ultralytics"])
     import ultralytics
 
+from ultralytics import YOLO
 from utils.detector import YOLOModel
 from utils.visualization import draw_boxes
 
